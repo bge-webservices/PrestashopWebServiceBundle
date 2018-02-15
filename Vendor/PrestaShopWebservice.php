@@ -45,7 +45,7 @@ class PrestaShopWebservice
 	protected $version;
 	/** @var array compatible versions of PrestaShop Webservice */
 	const psCompatibleVersionsMin = '1.4.0.0';
-	const psCompatibleVersionsMax = '1.6.0.14';
+	const psCompatibleVersionsMax = '1.8.1.99';
 
 	/**
 	 * PrestaShopWebservice constructor. Throw an exception when CURL is not installed/activated
@@ -270,7 +270,7 @@ class PrestaShopWebservice
 			if (isset($options['id']))
 				$url .= '/'.$options['id'];
 
-			$params = array('filter', 'display', 'sort', 'limit', 'id_shop', 'id_group_shop');
+			$params = array('filter', 'display', 'sort', 'limit', 'id_shop', 'id_group_shop', 'schema');
 			foreach ($params as $p)
 				foreach ($options as $k => $o)
 					if (strpos($k, $p) !== false)

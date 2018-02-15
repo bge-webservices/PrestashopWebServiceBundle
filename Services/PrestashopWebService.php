@@ -24,13 +24,13 @@ class PrestashopWebService{
     }
 
     public function personalInstance($websiteurl, $websitekey, $debug) {
-        if(is_null($this->instance)){
+        //if(is_null($this->instance)){
             $this->instance =  new \KkuetNet\PrestashopWebServiceBundle\Vendor\PrestaShopWebservice(
                 $websiteurl,
                 $websitekey,
                 $debug
             );
-        }
+        //}
         return $this->instance;
     }
 }
